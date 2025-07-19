@@ -1,0 +1,9 @@
+[[services]]
+  internal_port = 8080
+  auto_stop_machines = false
+  auto_start_machines = true
+
+  [[services.http_checks]]
+    interval = "10s"
+    timeout = "2s"
+    path = "/"
