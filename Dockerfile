@@ -7,4 +7,4 @@ RUN pip install --no-cache-dir -r requirements.txt
 
 COPY . .
 
-CMD ["python", "job_bot.py"]
+CMD ["gunicorn", "--bind", "0.0.0.0:$PORT", "job_bot:app"]
